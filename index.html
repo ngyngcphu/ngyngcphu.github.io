@@ -147,7 +147,7 @@
         e.key === "Enter" && sendMessage();
     })
 
-    const sendMessage = async () => {
+    const sendMessage = () => {
         if (currentMessage.value !== "") {
             const messageData = {
                 room: room,
@@ -159,7 +159,7 @@
                     new Date(Date.now()).getMinutes(),
             };
 
-            await socket.emit("send_message", messageData);
+            socket.emit("send_message", messageData);
             const mes = document.createElement("p");
             mes.innerText = "⌛" + messageData.time + "@" + messageData.author + "✎" + messageData.message;
             document.getElementById("messageData").appendChild(mes);
