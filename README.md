@@ -1,2 +1,1 @@
-client-side ChatApp
-URL: https://ngyngcphu.github.io/
+client-side ChatApp https://ngyngcphu.github.io/
